@@ -1,0 +1,63 @@
+<ion-view>
+
+  <ion-nav-title style="text-align:center;"><img src="img/eye_icon2.png" style="height: 40px; padding-right: 10px; margin-bottom: -5px;">
+  </ion-nav-title>
+  <ion-nav-buttons side="right">
+    <button class="button icon ion-ios-settings-strong" style="color: white;" ng-click="openModal()"></button>
+  </ion-nav-buttons>
+
+  <ion-pane>
+    <ion-content>
+
+      <ion-refresher pulling-text="Refresh..." on-refresh="doRefresh()">
+      </ion-refresher>
+
+      <ion-list>
+        <ion-item ng-repeat="cafe in yelp.results"
+        class="row-no-padding item-borderless" style="background-color: transparent;">
+
+          <div class="list-item">
+
+            <div class="list-gradient"></div>
+
+            <div class="list-info item-thumbnail-left">
+
+              <img ng-src="{{cafe.image_url}}" style="bottom: 4px;">
+              <h2 class="item_h2">{{cafe.name}}</h2 >
+
+              <p >
+                <span >
+                  <i class="ion ion-ios-navigate" ></i >
+                  {{cafe.distance | number:"0"}}m</span >
+              </p >
+              <p >
+                <i class="ion ion-ios-location" ></i >
+                {{cafe.location.address1}}
+              </p >
+              <p >
+                <span >
+                  <i class="ion ion-star" ></i >
+                  {{cafe.rating}}</span >
+                <span >
+                  <i class="ion ion-person" ></i >
+                  {{cafe.review_count}}</span >
+              </p >
+
+              <ion-option-button class="button-positive" style="padding-bottom: 5px;" ng-click="directions(cafe)">
+                <i class="ion-ios-location"></i>&nbsp;Directions
+              </ion-option-button>
+
+            </div>
+
+          </div>
+
+        </ion-item >
+      </ion-list >
+
+      <ion-infinite-scroll ng-if="yelp.hasMore" immediate-check="false" on-infinite="loadMore()">
+      </ion-infinite-scroll>
+
+    </ion-content>
+  </ion-pane>
+
+</ion-view>

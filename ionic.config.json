@@ -1,0 +1,31 @@
+{
+  "name": "coffeListApp",
+  "app_id": "",
+  "proxies": [
+    {
+      "path": "/yelp/oauth2/token",
+      "proxyUrl": "https://api.yelp.com/oauth2/token"
+    }
+  ],
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watch": {
+    "sass": [
+      "scss/**/*.scss"
+    ],
+    "html": [
+      "www/**/*.html"
+    ],
+    "livereload": [
+      "www/**/*.html",
+      "www/**/*.js",
+      "www/**/*.css"
+    ]
+  },
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

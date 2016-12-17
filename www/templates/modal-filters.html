@@ -1,0 +1,35 @@
+<ion-modal-view >
+  <ion-header-bar class="bar-royal">
+      <button class="button button-clear button-white" ng-click="closeModal()">Done</button>
+      <h1 class="title">Filters</h1>
+  </ion-header-bar>
+
+  <ion-content>
+
+    <label class="item item-input">
+      <i class="icon ion-search placeholder-icon"> Search</i>
+      <input type="search" placeholder="Search" ng-model="yelp.term" style="margin-left:22px; text-align:right;">
+    </label>
+
+    <label class="item item-input item-select">
+      <div class="input-label">
+      Distance
+      </div>
+      <select ng-model="yelp.radius">
+        <option value="500">500 m</option>
+        <option value="1000">1000 m</option>
+        <option value="2000">2000 m</option>
+        <option value="4000">4000 m</option>
+        <option value="10000">10000 m</option>
+      </select>
+    </label>
+
+<!--     <div>Price</div>
+    <div class="item range range-assertive">
+      0 €
+      <input type="range" name="priceRange" min="0" max="100" value="100" ng-model="filterElement.priceRange">
+      {{filterElement.priceRange}} €
+    </div> -->
+
+  </ion-content>
+</ion-modal-view>

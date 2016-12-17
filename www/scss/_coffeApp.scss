@@ -1,0 +1,188 @@
+// .bar {
+//   .bar-stable{
+//     .title{
+//       color: white
+//     }
+//   }
+//   img {
+//     height: 24px;
+//     vertical-align:middle;
+//     margin-right: 5px;
+//     margin-top: -5px;
+//   }
+// }
+
+/* Custom Styles */
+
+.tab-item .icon{
+  height: 28px !important;
+}
+
+.tabs-icon-top > .tabs .tab-item{
+  color: $stable;
+}
+
+/* Text Styles */
+
+.text-block{
+    margin-bottom: 15px;
+    p{
+        font-size: 14px;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+}
+
+.text-block.center{
+    text-align: center;
+    font-size: 10px;
+}
+
+/* discover */
+.choose_area{
+    margin-top: 20px;
+}
+
+.page-title{
+    margin-top : -6px;
+}
+.page-sub-title{
+    margin-top: -26px;
+    font-size: 8px;
+    font-weight: 400;
+    .bold{
+        font-weight: 500;
+    }
+}
+
+// .home-gradient{
+//     background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%, rgba(0,0,0,0.65) 101%); /* FF3.6-15 */
+//     background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%,rgba(0,0,0,0.65) 101%); /* Chrome10-25,Safari5.1-6 */
+//     background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%,rgba(0,0,0,0.65) 101%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+//     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+//     height: 100%;
+// }
+
+.item_h2{
+  color: $stable !important;
+}
+
+.list-item{
+    padding: 0px;
+    margin: 0px;
+    height: 135px;
+    // background: no-repeat center top url("../img/background_pattern.png");
+    // background-size: cover;
+    background-position-y: -10px;
+}
+
+.list-gradient{
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0, 79, 158, 0.23) 100%, rgba(0, 79, 158, 0.23) 101%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0, 79, 158, 0.23) 100%,rgba(0, 79, 158, 0.23) 101%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0, 79, 158, 0.23) 100%,rgba(0, 79, 158, 0.23) 101%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+    height: 135px;
+    padding-bottom:4px;
+}
+
+.list-info{
+    position: absolute;
+    bottom: 4px;
+    padding: 10px;
+    color: $stable !important;
+    p{
+      color: $stable2 !important;
+    }
+}
+
+.available-scroller {
+  height: 45px;
+  margin-left: 5px;
+}
+
+
+//****** MAPS ******//
+
+.scroll-content {
+  // background: center top url("../img/background_full2.jpg");
+  // background-size: cover;
+  background: #2C3E50; /* fallback for old browsers */
+  background: -webkit-linear-gradient(#2C3E50 , #4CA1AF); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(#2C3E50 , #4CA1AF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.scroll-content > ng-map {
+  height: 100%;
+}
+
+.scroll-content > .scroll {
+  height: 100%;
+  // background: center top url("../img/background_full2.jpg");
+  // background-size: cover;
+}
+.scroll-content > .scroll > ng-map {
+  height: 100%;
+}
+
+.modal > .scroll-content {
+  // background: center top url("../img/hexagonal_cube_pattern.jpg");
+  // background-size: cover;
+  background: #2C3E50; /* fallback for old browsers */
+  background: -webkit-linear-gradient(#4CA1AF , #2C3E50); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(#4CA1AF , #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.modal > .scroll-content > .scroll > .item {
+  margin: 10px;
+}
+
+//****** INFO WINDOW ******//
+
+.gm-style > div:first-child > div + div > div:last-child > div > div {
+
+  &:last-child {
+    margin-right: 5px;
+    margin-top: 5px;
+    > img {
+      display: none;
+    }
+  }
+  &:first-child > div {
+    background-color: $stable !important;
+    > div > div {
+      background-color: $stable !important;
+    }
+  }
+}
+
+
+.gm-style-iw {
+  max-width: 240px;
+  .contents {
+    img {
+      float: left;
+      margin-right: 10px;
+      max-height: 40px;
+    }
+    .address {
+      color: $royal;
+    }
+    .distance {
+      color: $assertive;
+    }
+    .rating {
+      color: $assertive;
+    }
+    h4 {
+      color: $royal;
+    }
+  }
+}
+
+
+.gm-style {
+  //font-family: $font-family-base !important;
+  background-color: $stable;
+}
+
+

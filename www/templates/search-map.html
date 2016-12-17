@@ -1,0 +1,65 @@
+<ion-view>
+
+  <ion-nav-title style="text-align:left;"><img src="img/eye_icon2.png" style="height: 40px; padding-right: 10px; margin-bottom: -5px;">
+  </ion-nav-title>
+
+  <ion-pane>
+    <ion-content scroll="false">
+
+      <ng-map center="{{ ymap.lat }}, {{ ymap.lon }}" zoom="14" disable-default-u-i="true">
+        <marker position="{{ [ymap.lat, ymap.lon] }}"></marker>
+
+        <marker ng-repeat="place in ymap.results" clickable="true" on-click="showDetails(event, place)" icon="img/cafe-maps-icon2_size.png" position="{{ [place.coordinates.latitude, place.coordinates.longitude] }}"></marker>
+
+        <info-window id="marker-info" >
+          <div ng-non-bindable="" >
+
+            <div class="contents" >
+
+              <img ng-src="{{yplace.image_url}}" alt="" />
+              <h4 >{{yplace.name}}</h4 >
+              <p >{{yplace.snippet_text}}</p >
+
+              <div class="row" >
+                <div class="col" >
+
+                  <p class="address" >
+                    <i class="ion ion-ios-location" ></i >
+                    {{yplace.location.address1}}
+                  </p >
+
+                </div >
+              </div>
+              <div class="row" >
+                <p class="distance" >
+                  <i class="ion ion-ios-navigate" ></i >
+                  {{yplace.distance | number:"0"}}m
+                  &nbsp;
+                </p >
+
+                <p class="rating" >
+                  <i class="ion ion-star" ></i >
+                  {{yplace.rating}}
+                  &nbsp;
+                  <i class="ion ion-person" ></i >
+                  {{yplace.review_count}}
+                </p >
+              </div>
+              </div >
+              <div class="row" style="text-align: center;">
+                <div class="col col-offset-10"">
+                  <div class="button button-small button-royal" style="text-align: center;" ng-click="mapDirections(yplace)">
+                    Directions
+                  </div >
+                </div>
+              </div>
+            </div >
+          </div >
+        </info-window >
+
+      </ng-map>
+
+    </ion-content>
+  </ion-pane>
+
+</ion-view>
